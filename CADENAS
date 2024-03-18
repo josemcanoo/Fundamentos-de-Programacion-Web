@@ -1,0 +1,66 @@
+//CADENA 1
+// Mitad de la cita proporcionada
+const quoteStart = "Don't judge each day by the harvest you reap ";
+
+// La otra mitad de la cita
+const quoteEnd = 'but by the seeds that you plant.';
+
+// Concatenar las dos partes para formar la cita completa
+const finalQuote = quoteStart + quoteEnd;
+
+
+//CADENA 2
+// Cita original
+const quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
+
+// Subcadena que buscamos en la cita
+const substring = 'green eggs and ham';
+
+// Longitud de la cita
+const quoteLength = quote.length;
+
+// Posición del índice donde aparece la subcadena
+const index = quote.indexOf(substring);
+
+// Recortar la cita original para obtener la cita revisada
+const revisedQuote = quote.slice(0, index) + 'No me gustan los huevos verdes y el jamón';
+
+
+//CADENA 3
+// Cita con letras mixtas de mayúsculas y minúsculas
+const quote = 'I dO nOT lIke gREen eGgS anD HAM';
+
+// Corregir la capitalización de la cita
+const fixedQuote = quote.toLowerCase().replace(/(^\w|\s\w)/g, match => match.toUpperCase());
+
+// Reemplazar "huevos verdes con jamón" con otro alimento que no te guste
+const food = 'sushi';
+const replacedQuote = fixedQuote.replace('Green eggs and ham', food);
+
+// Agregar un punto al final de la cita
+const finalQuote = replacedQuote + '.';
+
+
+//CADENA 4
+C// Nombre del teorema
+const theorem = 'Pythagorean theorem';
+
+// Longitudes de los dos catetos del triángulo rectángulo
+const a = 5;
+const b = 8;
+
+// Cálculo de la longitud de la hipotenusa utilizando el teorema de Pitágoras
+const c = Math.sqrt(a * a + b * b);
+
+// Plantilla literal para la cadena con marcadores de posición
+const myString = `Using ${theorem}, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b}, the length of the hypotenuse is ${c}.`;
+
+// No editar el código debajo de esta línea
+
+// Crear un elemento de párrafo para mostrar la cadena resultante
+section.innerHTML = ' ';
+const para1 = document.createElement('p');
+para1.textContent = myString;
+
+// Agregar el elemento de párrafo a la sección en el documento HTML
+section.appendChild(para1);
