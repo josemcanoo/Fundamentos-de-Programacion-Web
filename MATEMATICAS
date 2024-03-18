@@ -1,0 +1,38 @@
+//MATEMATICAS 1
+// Definición de las variables numéricas
+let num1 = 8;
+let num2 = 4;
+let num3 = 10;
+let num4 = 2;
+
+// Suma de los dos primeros números
+let sum = num1 + num2;
+
+// Resta del cuarto número al tercero
+let difference = num4 - num3;
+
+// Multiplicación de los resultados anteriores para obtener el resultado final
+let finalResult = sum * difference;
+
+// Comprobación de si el resultado final es par
+let evenOddResult = finalResult % 2 === 0 ? 0 : 1;
+
+
+//MATEMATICAS 2
+// Actualización de los cálculos originales para obtener el resultado deseado
+let result = (7 + 13) / (9 + 7);
+let result2 = 100 / (2 * 6);
+
+// Multiplicación de los resultados y formateo con 2 decimales
+let finalResult = (result * result2).toFixed(2);
+
+// Conversión del resultado final a tipo número
+let finalNumber = parseFloat(finalResult);
+
+
+//MATEMATICAS 3
+// Pruebas para comparar pesos, alturas y contraseñas
+let weightComparison = eleWeight < mouseWeight;
+let heightComparison = ostrichHeight > duckHeight;
+let pwdMatch = pwd1.toLowerCase() === pwd2.toLowerCase();
+
