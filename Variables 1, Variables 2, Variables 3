@@ -1,0 +1,22 @@
+//VARIABLE 1
+// Declaración de variable llamada myName.
+let myName;
+// Inicialización de myName con un valor adecuado, en este caso, 'Juan'.
+myName = 'Juan';
+// Declaración de variable llamada myAge e inicialización en la misma línea con un valor, en este caso, 30.
+let myAge = 30;
+
+//VARIABLE 2
+// No es necesario declarar nuevamente myName, ya que ya fue declarada en Variables 1.
+// Actualizar el valor de myName a 'Paul'.
+myName = 'Paul';
+
+//VARIABLE 3
+// No es necesario declarar nuevamente myName, ya que ya fue declarada en Variables 1.
+// Cambiar el valor de myName a 'Chris'.
+myName = 'Chris';
+// Declarar myAge con un valor numérico en lugar de un valor de cadena.
+let myAge = 42;
+
+
+
