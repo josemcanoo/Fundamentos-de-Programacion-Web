@@ -1,0 +1,63 @@
+
+//LOOP 1
+// Función para imprimir los elementos de un array
+function printArray(myArray, list) {
+
+  // Bucle `for...of` para iterar sobre cada elemento del array
+  for (const item of myArray) {
+    // Crea un nuevo elemento `li`
+    const listItem = document.createElement("li");
+
+    // Asigna el contenido del elemento actual al `textContent` del `li`
+    listItem.textContent = item;
+
+    // Agrega el elemento `li` al elemento `list` proporcionado
+    list.appendChild(listItem);
+  }
+}
+
+// Llamada a la función `printArray` con los arrays `myArray` y `list`
+printArray(myArray, list);
+
+
+
+//LOOP 2
+// Función para buscar un nombre en la agenda telefónica
+function findPhoneByName(name, para, phonebook) {
+
+  // Bucle `for...of` para iterar sobre cada entrada de la agenda
+  for (const entry of phonebook) {
+
+    // Compara el nombre de la entrada actual con el nombre buscado
+    if (entry.name === name) {
+
+      // Si se encuentra una coincidencia, actualiza el contenido del párrafo y sale del bucle
+      para.textContent = `Nombre: ${entry.name}, Teléfono: ${entry.phoneNumber}`;
+      return;
+    }
+  }
+
+  // Si no se encuentra ninguna coincidencia, actualiza el contenido del párrafo
+  para.textContent = `${name} no encontrado en la agenda`;
+}
+
+// Llamada a la función `findPhoneByName` con los parámetros `name`, `para` y `phonebook`
+findPhoneByName(name, para, phonebook);
+
+
+//LOOP 3
+// Función para encontrar números primos
+function findPrimes(para) {
+
+  // Bucle `for` con un contador decreciente desde 499 hasta 2
+  for (let i = 499; i >= 2; i--) {
+
+    // Si el número actual es primo, se agrega al contenido del párrafo
+    if (isPrime(i)) {
+      para.textContent += `${i} `;
+    }
+  }
+}
+
+// Llamada a la función `findPrimes` con el parámetro `para`
+findPrimes(para);
