@@ -1,0 +1,87 @@
+//FUNCION 1
+const nombres = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+const parrafo = document.createElement('p');
+
+function elegirNombreAleatorio(nombres, parrafo) {
+  // 1. Generar un índice aleatorio dentro del rango válido del arreglo (0 a longitud-1)
+  const indiceAleatorio = Math.floor(Math.random() * nombres.length);
+
+  // 2. Obtener el nombre aleatorio del arreglo usando el índice
+  const nombreAleatorio = nombres[indiceAleatorio];
+
+  // 3. Establecer el contenido del párrafo con el nombre aleatorio
+  parrafo.textContent = nombreAleatorio;
+}
+
+// Ejecutar la función para elegir y mostrar un nombre aleatorio
+elegirNombreAleatorio(nombres, parrafo);
+
+// Añadir el párrafo a la sección (asumiendo que existe una sección definida)
+section.innerHTML = ''; // Limpiar el contenido previo de la sección
+section.appendChild(parrafo);
+
+
+//FUNCION 2
+const lienzo = document.querySelector('canvas');
+const ctx = lienzo.getContext('2d');
+
+const x = 50;
+const y = 60;
+const ancho = 100;
+const alto = 75;
+const color = 'blue';
+
+function dibujarRectangulo(ctx, x, y, ancho, alto, color) {
+  // Limpiar el lienzo antes de dibujar para evitar rectángulos superpuestos
+  ctx.clearRect(0, 0, lienzo.width, lienzo.height);
+
+  // Establecer el estilo de relleno (para un rectángulo relleno)
+  ctx.fillStyle = color;
+
+  // Dibujar el rectángulo relleno usando fillRect
+  ctx.fillRect(x, y, ancho, alto);
+}
+
+// Dibujar el rectángulo usando la función definida
+dibujarRectangulo(ctx, x, y, ancho, alto, color);
+
+
+//FUNCION 3
+const nombres = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+const parrafo = document.createElement('p');
+
+function aleatorio(min, max) {
+  // Asegurar que min sea menor o igual que max para un rango válido
+  if (min > max) {
+    [min, max] = [max, min]; // Intercambiar valores si min es mayor que max
+  }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function elegirNombre(nombresArray) {
+  // Generar un índice aleatorio dentro del rango válido del arreglo
+  const indiceAleatorio = aleatorio(0, nombresArray.length - 1);
+  return nombresArray[indiceAleatorio];
+}
+
+// Elegir un nombre aleatorio y mostrarlo
+const nombreElegido = elegirNombre(nombres);
+parrafo.textContent = nombreElegido;
+
+// Añadir el párrafo a la sección (asumiendo que existe una sección)
+section.innerHTML = '';
+section.appendChild(parrafo);
+
+
+//FUNCION 4
+const nombres = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+const parrafo = document.createElement('p');
+
+// Utilizar una función de flecha para un callback de filtro compacto
+const nombresCortos = nombres.filter(nombre => nombre.length < 5);
+
+parrafo.textContent = nombresCortos;
+
+// No edites el código debajo de aquí!
+section.innerHTML = ' ';
+section.appendChild(parrafo);
