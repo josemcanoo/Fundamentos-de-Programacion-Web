@@ -1,0 +1,73 @@
+//EVENTO 1
+const btn = document.querySelector('.off');
+
+function toggleButtonText() {
+  // Obtener el texto actual del botón
+  const textoActual = btn.textContent;
+
+  // Alternar el texto basado en su estado actual
+  btn.textContent = textoActual === 'OFF' ? 'ON' : 'OFF';
+}
+
+// Adjuntar el controlador de eventos al evento de clic del botón
+btn.addEventListener('click', toggleButtonText);
+
+//EVENTO 2
+const lienzo = document.querySelector('canvas');
+const ctx = lienzo.getContext('2d');
+
+function dibujarCirculo(x, y, tamaño) {
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, lienzo.width, lienzo.height); // Limpiar el lienzo
+
+  ctx.beginPath();
+  ctx.fillStyle = 'black';
+  ctx.arc(x, y, tamaño, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+let x = 50;
+let y = 50;
+const tamaño = 30;
+
+dibujarCirculo(x, y, tamaño);
+
+document.addEventListener('keydown', function(evento) {
+  const tecla = evento.key.toUpperCase(); // Manejar las pulsaciones de teclas en mayúsculas
+  const movimiento = 5; // Cantidad de movimiento por pulsación de tecla
+
+  switch (tecla) {
+    case 'W':
+      y -= movimiento;
+      break;
+    case 'A':
+      x -= movimiento;
+      break;
+    case 'S':
+      y += movimiento;
+      break;
+    case 'D':
+      x += movimiento;
+      break;
+    default:
+      // Ignorar otras teclas
+      break;
+  }
+
+  // Asegurar que el círculo se mantenga dentro de los límites del lienzo
+  x = Math.max(tamaño, Math.min(lienzo.width - tamaño, x));
+  y = Math.max(tamaño, Math.min(lienzo.height - tamaño, y));
+
+  dibujarCirculo(x, y, tamaño);
+});
+
+//EVENTO 3
+const barraBotones = document.querySelector('.button-bar');
+
+barraBotones.addEventListener('click', function(evento) {
+ // Verificar si el elemento clickeado es un botón
+ if (evento.target.tagName === 'BUTTON') {
+   const colorBotonClickeado = evento.target.dataset.color;
+   barraBotones.style.backgroundColor = colorBotonClickeado;
+ }
+});
